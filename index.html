@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>WotLK Ignite Munch Analyzer</title>
+</head>
+<body>
+    <input type="text" placeholder="Warcraft Logs Report URL..." id="logURL">
+    <button type="button" onclick="getInput();">Analyze</button>
+    <script>
+        // get input from form on the URL, and separate out the ID
+        function getInput() {
+            var wclURL = document.getElementById("logURL").value;
+            console.log(wclURL);
+            splitInputForCode(wclURL);
+        }
+        var reportCode = function splitInputForCode(inputURL) {
+            var wclURLArray = inputURL.split('/');
+            console.log(wclURLArray[5]);
+            var wclCode = wclURLArray[5];
+            return wclCode
+        }
+        // use ID to GET array of fights from the API /report/fights/{code}
+        function getFights(reportCode) {
+            
+        }
+        // use ID to GET damage-done by fire spell crits, and by ignite for each fight from events API
+
+        // compare "perfect" ignite damage to actual, and present number
+    </script>
+</body>
+</html>
